@@ -55,7 +55,7 @@ const Header = () => {
     setPages(
       isAdmin === undefined || isAdmin === null
         ? []
-        : !isAdmin
+        : isAdmin === "false"
           ? [{ label: "My Bills", link: "/mybills" }]
           : [
             { label: "Apartments", link: "/apartments" },

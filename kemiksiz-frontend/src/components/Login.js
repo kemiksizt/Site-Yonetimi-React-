@@ -28,7 +28,7 @@ export default function Login() {
 
 
   const handleSubmit = () => {
-    axios.post("api/login", user).then(response => {
+    axios.post("/login", user).then(response => {
       const data = response.data.entity;
       localStorage.setItem("isAdmin", data.isAdmin);
       localStorage.setItem("userId", data.id);
